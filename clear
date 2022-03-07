@@ -1,0 +1,344 @@
+[33mcommit 4ae109b60542a9c9681dda9bcc8f54162e63a4cf[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Andrey Krupskiy <andrei.1039868@gmail.com>
+Date:   Sat Feb 26 13:16:35 2022 +0300
+
+    Fitst Save Git project
+
+[1mdiff --git a/.idea/.gitignore b/.idea/.gitignore[m
+[1mnew file mode 100644[m
+[1mindex 0000000..26d3352[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/.gitignore[m
+[36m@@ -0,0 +1,3 @@[m
+[32m+[m[32m# Default ignored files[m
+[32m+[m[32m/shelf/[m
+[32m+[m[32m/workspace.xml[m
+[1mdiff --git a/.idea/.name b/.idea/.name[m
+[1mnew file mode 100644[m
+[1mindex 0000000..b3405b3[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/.name[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mMy Application[m
+\ No newline at end of file[m
+[1mdiff --git a/.idea/compiler.xml b/.idea/compiler.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..fb7f4a8[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/compiler.xml[m
+[36m@@ -0,0 +1,6 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<project version="4">[m
+[32m+[m[32m  <component name="CompilerConfiguration">[m
+[32m+[m[32m    <bytecodeTargetLevel target="11" />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m</project>[m
+\ No newline at end of file[m
+[1mdiff --git a/.idea/deploymentTargetDropDown.xml b/.idea/deploymentTargetDropDown.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..ceea89a[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/deploymentTargetDropDown.xml[m
+[36m@@ -0,0 +1,17 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<project version="4">[m
+[32m+[m[32m  <component name="deploymentTargetDropDown">[m
+[32m+[m[32m    <targetSelectedWithDropDown>[m
+[32m+[m[32m      <Target>[m
+[32m+[m[32m        <type value="QUICK_BOOT_TARGET" />[m
+[32m+[m[32m        <deviceKey>[m
+[32m+[m[32m          <Key>[m
+[32m+[m[32m            <type value="VIRTUAL_DEVICE_PATH" />[m
+[32m+[m[32m            <value value="C:\Users\andre\.android\avd\Pixel_API_30.avd" />[m
+[32m+[m[32m          </Key>[m
+[32m+[m[32m        </deviceKey>[m
+[32m+[m[32m      </Target>[m
+[32m+[m[32m    </targetSelectedWithDropDown>[m
+[32m+[m[32m    <timeTargetWasSelectedWithDropDown value="2022-02-23T20:50:27.215173600Z" />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m</project>[m
+\ No newline at end of file[m
+[1mdiff --git a/.idea/gradle.xml b/.idea/gradle.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..526b4c2[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/gradle.xml[m
+[36m@@ -0,0 +1,20 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<project version="4">[m
+[32m+[m[32m  <component name="GradleMigrationSettings" migrationVersion="1" />[m
+[32m+[m[32m  <component name="GradleSettings">[m
+[32m+[m[32m    <option name="linkedExternalProjectsSettings">[m
+[32m+[m[32m      <GradleProjectSettings>[m
+[32m+[m[32m        <option name="testRunner" value="GRADLE" />[m
+[32m+[m[32m        <option name="distributionType" value="DEFAULT_WRAPPED" />[m
+[32m+[m[32m        <option name="externalProjectPath" value="$PROJECT_DIR$" />[m
+[32m+[m[32m        <option name="modules">[m
+[32m+[m[32m          <set>[m
+[32m+[m[32m            <option value="$PROJECT_DIR$" />[m
+[32m+[m[32m            <option value="$PROJECT_DIR$/app" />[m
+[32m+[m[32m          </set>[m
+[32m+[m[32m        </option>[m
+[32m+[m[32m        <option name="resolveModulePerSourceSet" value="false" />[m
+[32m+[m[32m      </GradleProjectSettings>[m
+[32m+[m[32m    </option>[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m</project>[m
+\ No newline at end of file[m
+[1mdiff --git a/.idea/misc.xml b/.idea/misc.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..a1522e9[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/misc.xml[m
+[36m@@ -0,0 +1,28 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<project version="4">[m
+[32m+[m[32m  <component name="DesignSurface">[m
+[32m+[m[32m    <option name="filePathToZoomLevelMap">[m
+[32m+[m[32m      <map>[m
+[32m+[m[32m        <entry key="..\:/Users/andre/Documents/WOWSIRUS_1.0/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2095" />[m
+[32m+[m[32m        <entry key="..\:/Users/andre/Documents/WOWSIRUS_1.0/app/src/main/res/drawable/button_back_1.xml" value="0.24" />[m
+[32m+[m[32m        <entry key="..\:/Users/andre/Documents/WOWSIRUS_1.0/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2095" />[m
+[32m+[m[32m        <entry key="..\:/Users/andre/Documents/WOWSIRUS_1.0/app/src/main/res/drawable/slyle_bnt_number_1.xml" value="0.107" />[m
+[32m+[m[32m        <entry key="..\:/Users/andre/Documents/WOWSIRUS_1.0/app/src/main/res/drawable/style_amg_universal.xml" value="0.1" />[m
+[32m+[m[32m        <entry key="..\:/Users/andre/Documents/WOWSIRUS_1.0/app/src/main/res/drawable/style_bnt_white.xml" value="0.24" />[m
+[32m+[m[32m        <entry key="..\:/Users/andre/Documents/WOWSIRUS_1.0/app/src/main/res/drawable/style_bnt_white_press.xml" value="0.24" />[m
+[32m+[m[32m        <entry key="..\:/Users/andre/Documents/WOWSIRUS_1.0/app/src/main/res/layout/activity_main.xml" value="0.2" />[m
+[32m+[m[32m        <entry key="..\:/Users/andre/Documents/WOWSIRUS_1.0/app/src/main/res/layout/gaidportn.xml" value="0.16799999999999998" />[m
+[32m+[m[32m        <entry key="..\:/Users/andre/Documents/WOWSIRUS_1.0/app/src/main/res/layout/gaids.xml" value="0.176" />[m
+[32m+[m[32m        <entry key="..\:/Users/andre/Documents/WOWSIRUS_1.0/app/src/main/res/layout/list_itam.xml" value="0.20521590423257802" />[m
+[32m+[m[32m        <entry key="..\:/Users/andre/Documents/WOWSIRUS_1.0/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2095" />[m
+[32m+[m[32m        <entry key="..\:/Users/andre/Documents/WOWSIRUS_1.0/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2095" />[m
+[32m+[m[32m      </map>[m
+[32m+[m[32m    </option>[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">[m
+[32m+[m[32m    <output url="file://$PROJECT_DIR$/build/classes" />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="ProjectType">[m
+[32m+[m[32m    <option name="id" value="Android" />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m</project>[m
+\ No newline at end of file[m
+[1mdiff --git a/.idea/vcs.xml b/.idea/vcs.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..94a25f7[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/vcs.xml[m
+[36m@@ -0,0 +1,6 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<project version="4">[m
+[32m+[m[32m  <component name="VcsDirectoryMappings">[m
+[32m+[m[32m    <mapping directory="$PROJECT_DIR$" vcs="Git" />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m</project>[m
+\ No newline at end of file[m
+[1mdiff --git a/app/.gitignore b/app/.gitignore[m
+[1mnew file mode 100644[m
+[1mindex 0000000..42afabf[m
+[1m--- /dev/null[m
+[1m+++ b/app/.gitignore[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32m/build[m
+\ No newline at end of file[m
+[1mdiff --git a/app/build.gradle b/app/build.gradle[m
+[1mnew file mode 100644[m
+[1mindex 0000000..8107137[m
+[1m--- /dev/null[m
+[1m+++ b/app/build.gradle[m
+[36m@@ -0,0 +1,40 @@[m
+[32m+[m[32mplugins {[m
+[32m+[m[32m    id 'com.android.application'[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mandroid {[m
+[32m+[m[32m    compileSdk 32[m
+[32m+[m
+[32m+[m[32m    defaultConfig {[m
+[32m+[m[32m        applicationId "andrei.krupskiy.myapplication"[m
+[32m+[m[32m        minSdk 28[m
+[32m+[m[32m        targetSdk 32[m
+[32m+[m[32m        versionCode 1[m
+[32m+[m[32m        versionName "1.0"[m
+[32m+[m
+[32m+[m[32m        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    buildTypes {[m
+[32m+[m[32m        release {[m
+[32m+[m[32m            minifyEnabled false[m
+[32m+[m[32m            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'[m
+[32m+[m[32m        }[m
+[32m+[m[32m    }[m
+[32m+[m[32m    compileOptions {[m
+[32m+[m[32m        sourceCompatibility JavaVersion.VERSION_1_8[m
+[32m+[m[32m        targetCompatibility JavaVersion.VERSION_1_8[m
+[32m+[m[32m    }[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mdependencies {[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    implementation 'androidx.appcompat:appcompat:1.4.1'[m
+[32m+[m[32m    implementation 'com.google.android.material:material:1.5.0'[m
+[32m+[m[32m    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'[m
+[32m+[m[32m    implementation 'org.jsoup:jsoup:1.14.3'[m
+[32m+[m[32m    testImplementation 'junit:junit:4.13.2'[m
+[32m+[m[32m    androidTestImplementation 'androidx.test.ext:junit:1.1.3'[m
+[32m+[m[32m    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/app/libs/jsoup-1.14.3.jar b/app/libs/jsoup-1.14.3.jar[m
+[1mnew file mode 100644[m
+[1mindex 0000000..b182c83[m
+Binary files /dev/null and b/app/libs/jsoup-1.14.3.jar differ
+[1mdiff --git a/app/proguard-rules.pro b/app/proguard-rules.pro[m
+[1mnew file mode 100644[m
+[1mindex 0000000..481bb43[m
+[1m--- /dev/null[m
+[1m+++ b/app/proguard-rules.pro[m
+[36m@@ -0,0 +1,21 @@[m
+[32m+[m[32m# Add project specific ProGuard rules here.[m
+[32m+[m[32m# You can control the set of applied configuration files using the[m
+[32m+[m[32m# proguardFiles setting in build.gradle.[m
+[32m+[m[32m#[m
+[32m+[m[32m# For more details, see[m
+[32m+[m[32m#   http://developer.android.com/guide/developing/tools/proguard.html[m
+[32m+[m
+[32m+[m[32m# If your project uses WebView with JS, uncomment the following[m
+[32m+[m[32m# and specify the fully qualified class name to the JavaScript interface[m
+[32m+[m[32m# class:[m
+[32m+[m[32m#-keepclassmembers class fqcn.of.javascript.interface.for.webview {[m
+[32m+[m[32m#   public *;[m
+[32m+[m[32m#}[m
+[32m+[m
+[32m+[m[32m# Uncomment this to preserve the line number information for[m
+[32m+[m[32m# debugging stack traces.[m
+[32m+[m[32m#-keepattributes SourceFile,LineNumberTable[m
+[32m+[m
+[32m+[m[32m# If you keep the line number information, uncomment this to[m
+[32m+[m[32m# hide the original source file name.[m
+[32m+[m[32m#-renamesourcefileattribute SourceFile[m
+\ No newline at end of file[m
+[1mdiff --git a/app/release/app-release.apk b/app/release/app-release.apk[m
+[1mnew file mode 100644[m
+[1mindex 0000000..52bbee5[m
+Binary files /dev/null and b/app/release/app-release.apk differ
+[1mdiff --git a/app/release/output-metadata.json b/app/release/output-metadata.json[m
+[1mnew file mode 100644[m
+[1mindex 0000000..b1b7651[m
+[1m--- /dev/null[m
+[1m+++ b/app/release/output-metadata.json[m
+[36m@@ -0,0 +1,20 @@[m
+[32m+[m[32m{[m
+[32m+[m[32m  "version": 3,[m
+[32m+[m[32m  "artifactType": {[m
+[32m+[m[32m    "type": "APK",[m
+[32m+[m[32m    "kind": "Directory"[m
+[32m+[m[32m  },[m
+[32m+[m[32m  "applicationId": "andrei.krupskiy.myapplication",[m
+[32m+[m[32m  "variantName": "release",[m
+[32m+[m[32m  "elements": [[m
+[32m+[m[32m    {[m
+[32m+[m[32m      "type": "SINGLE",[m
+[32m+[m[32m      "filters": [],[m
+[32m+[m[32m      "attributes": [],[m
+[32m+[m[32m      "versionCode": 1,[m
+[32m+[m[32m      "versionName": "1.0",[m
+[32m+[m[32m      "outputFile": "app-release.apk"[m
+[32m+[m[32m    }[m
+[32m+[m[32m  ],[m
+[32m+[m[32m  "elementType": "File"[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/app/src/androidTest/java/andrei/krupskiy/myapplication/ExampleInstrumentedTest.java b/app/src/androidTest/java/andrei/krupskiy/myapplication/ExampleInstrumentedTest.java[m
+[1mnew file mode 100644[m
+[1mindex 0000000..3c54523[m
+[1m--- /dev/null[m
+[1m+++ b/app/src/androidTest/java/andrei/krupskiy/myapplication/ExampleInstrumentedTest.java[m
+[36m@@ -0,0 +1,26 @@[m
+[32m+[m[32mpackage andrei.krupskiy.myapplication;[m
+[32m+[m
+[32m+[m[32mimport android.content.Context;[m
+[32m+[m
+[32m+[m[32mimport androidx.test.platform.app.InstrumentationRegistry;[m
+[32m+[m[32mimport androidx.test.ext.junit.runners.AndroidJUnit4;[m
+[32m+[m
+[32m+[m[32mimport org.junit.Test;[m
+[32m+[m[32mimport org.junit.runner.RunWith;[m
+[32m+[m
+[32m+[m[32mimport static org.junit.Assert.*;[m
+[32m+[m
+[32m+[m[32m/**[m
+[32m+[m[32m * Instrumented test, which will execute on an Android device.[m
+[32m+[m[32m *[m
+[32m+[m[32m * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>[m
+[32m+[m[32m */[m
+[32m+[m[32m@RunWith(AndroidJUnit4.class)[m
+[32m+[m[32mpublic class ExampleInstrumentedTest {[m
+[32m+[m[32m    @Test[m
+[32m+[m[32m    public void useAppContext() {[m
+[32m+[m[32m        // Context of the app under test.[m
+[32m+[m[32m        Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();[m
+[32m+[m[32m        assertEquals("andrei.krupskiy.myapplication", appContext.getPackageName());[m
+[32m+[m[32m    }[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..018d0c2[m
+[1m--- /dev/null[m
+[1m+++ b/app/src/main/AndroidManifest.xml[m
+[36m@@ -0,0 +1,36 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="utf-8"?>[m
+[32m+[m[32m<manifest xmlns:android="http://schemas.android.com/apk/res/android"[m
+[32m+[m[32m    package="andrei.krupskiy.myapplication">[m
+[32m+[m[41m    [m
+[32m+[m[32m    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>[m
+[32m+[m[32m    <uses-permission android:name="android.permission.INTERNET"/>[m
+[32m+[m
+[32m+[m[32m    <application[m
+[32m+[m[32m        android:allowBackup="true"[m
+[32m+[m[32m        android:icon="@mipmap/ic_launcher"[m
+[32m+[m[32m        android:label="@string/app_name"[m
+[32m+[m[32m        android:roundIcon="@mipmap/ic_launcher_round"[m
+[32m+[m[32m        android:supportsRtl="true"[m
+[32m+[m[32m        android:theme="@style/Theme.AppCompat.NoActionBar"[m
+[32m+[m[32m        >[m
+[32m+[m[32m        <activity[m
+[32m+[m[32m            android:name=".MainActivity"[m
+[32m+[m[32m            android:exported="true"[m
+[32m+[m[32m            android:screenOrientation="portrait">[m
+[32m+[m[32m            <intent-filter>[m
+[32m+[m[32m                <action android:name="android.intent.action.MAIN" />[m
+[32m+[m[32m                <category android:name="android.intent.category.LAUNCHER" />[m
+[32m+[m[32m            </intent-filter>[m
+[32m+[m[32m        </activity>[m
+[32m+[m[32m        <activity[m
+[32m+[m[32m            android:name=".Gaids"[m
+[32m+[m[32m            android:exported="true"[m
+[32m+[m[32m            android:screenOrientation="portrait">[m
+[32m+[m[32m            <intent-filter>[m
+[32m+[m
+[32m+[m[32m                <category android:name="android.intent.category.LAUNCHER" />[m
+[32m+[m[32m            </intent-filter>[m
+[32m+[m[32m        </activity>[m
+[32m+[m[32m    </application>[m
+[32m+[m
+[32m+[m[32m</manifest>[m
+\ No newline at end of file[m
+[1mdiff --git a/app/src/main/ic_launcher-playstore.png b/app/src/main/ic_launcher-playstore.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..dcd64c4[m
+Binary files /dev/null and b/app/src/main/ic_launcher-playstore.png differ
+[1mdiff --git a/app/src/main/java/andrei/krupskiy/myapplication/Gaids.java b/app/src/main/java/andrei/krupskiy/myapplication/Gaids.java[m
+[1mnew file mode 100644[m
+[1mindex 0000000..8d3a4db[m
+[1m--- /dev/null[m
+[1m+++ b/app/src/main/java/andrei/krupskiy/myapplication/Gaids.java[m
+[36m@@ -0,0 +1,127 @@[m
+[32m+[m[32mpackage andrei.krupskiy.myapplication;[m
+[32m+[m
+[32m+[m[32mimport android.content.Intent;[m
+[32m+[m[32mimport android.net.Uri;[m
+[32m+[m[32mimport android.os.As
