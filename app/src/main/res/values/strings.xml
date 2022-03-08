@@ -2,10 +2,9 @@
     <string name="app_name">WoW Sirus helper</string>
     <string name="buttonprogolosovat">Проголосовать</string>
     <string name="buttonprogoforum">Форум</string>
-    <string name="nazad">назад</string>
-    <string name="gaids">tests</string>
-    <string name="gaid_1">Что нового Форум</string>
-
+    <string name="buttonArena">Рейтинг Арены</string>
+    <string name="buttonBg">Рейтинг БГ</string>
+    <string name="buttonProfile">Профиль игрока</string>
 
 
 </resources>

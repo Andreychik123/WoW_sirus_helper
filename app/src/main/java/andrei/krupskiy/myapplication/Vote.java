@@ -11,10 +11,13 @@ import android.webkit.WebView;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Vote extends AppCompatActivity {
+
+    private long backpressedTime;
 
     ProgressBar progressBar;
     EditText inputUrl;
@@ -102,14 +105,21 @@ public class Vote extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        try {
+
+        if (backpressedTime + 2000 > System.currentTimeMillis()){ //если текущее время + 2с болье текущего время, то...
             Intent intent = new Intent(Vote.this, MainActivity.class);
             // есть намеринеие перейти из GameLevels в MainActivity
             startActivity(intent);
             finish();
-            // открыть новое      //закрыть старое
+        }else{
 
-        } catch (Exception e) {
+            if (webView.canGoBack())
+                webView.goBack();
+
+            Toast.makeText(getBaseContext(), "Нажмите ещё раз, что бы перейти в Главное меню",Toast.LENGTH_SHORT).show(); //выдает текст
+
         }
+
+        backpressedTime = System.currentTimeMillis(); //засекли время нажатия на кнопку
     }
 }
