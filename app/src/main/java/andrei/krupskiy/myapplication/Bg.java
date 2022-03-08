@@ -30,7 +30,7 @@ public class Bg extends AppCompatActivity {
         setContentView(R.layout.web);
 
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
-        inputUrl = (EditText) findViewById(R.id.autoCompleteTextView);
+        inputUrl = (EditText) findViewById(R.id.autoCompleteTextViewX4);
         webView = (WebView) findViewById(R.id.webView);
         sendButton = (ImageButton) findViewById(R.id.sendButton);
         forwardButton = (ImageButton) findViewById(R.id.forwardButton);

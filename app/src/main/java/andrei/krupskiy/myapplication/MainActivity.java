@@ -143,6 +143,39 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button buttonX4 = (Button)findViewById(R.id.buttonX4);  // код переброски на другую сцену
+        buttonX4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    Intent intent = new Intent(MainActivity.this, ArmoryX4.class);
+
+                    startActivity(intent);finish();
+
+                } catch (Exception e) {
+                }
+
+            }
+        });
+
+        Button buttonX2 = (Button)findViewById(R.id.buttonX2);  // код переброски на другую сцену
+        buttonX2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    Intent intent = new Intent(MainActivity.this, ArmoryX2.class);
+
+                    startActivity(intent);finish();
+
+                } catch (Exception e) {
+                }
+
+            }
+        });
+
+
+
+
         Button buttonprogoforum = (Button)findViewById(R.id.buttonprogoforum);  // код переброски на другую сцену
         buttonprogoforum.setOnClickListener(new View.OnClickListener() {
             @Override

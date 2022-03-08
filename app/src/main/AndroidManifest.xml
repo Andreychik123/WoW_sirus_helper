@@ -81,11 +81,29 @@
         </activity>
         //End Bg
 
+        //Start ArmoryX2
+        <activity
+            android:name=".ArmoryX2"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        //End ArmoryX2
 
+        //Start ArmoryX4
+        <activity
+            android:name=".ArmoryX4"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
 
-
-
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        //End ArmoryX4
 
 
     </application>

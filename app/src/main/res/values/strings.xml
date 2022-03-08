@@ -5,6 +5,7 @@
     <string name="buttonArena">Рейтинг Арены</string>
     <string name="buttonBg">Рейтинг БГ</string>
     <string name="buttonArmory">Armory</string>
+    <string name="textArmory">Введите имя персонажа</string>
 
 
 </resources>
