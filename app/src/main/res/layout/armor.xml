@@ -26,15 +26,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_refresh_black" />
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginRight="5dp"
-                android:layout_marginLeft="5dp"
-                android:textSize="20dp"
-                android:text="@string/textArmory" />
+
 
             <AutoCompleteTextView
                 android:id="@+id/autoCompleteTextViewX4"
@@ -42,7 +34,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginRight="120dp"
+                android:layout_marginRight="20dp"
+                android:text="@string/textArmory"
                 app:layout_constraintEnd_toStartOf="@+id/sendButton"
                 app:layout_constraintStart_toEndOf="@+id/refreshButton"
                 app:layout_constraintTop_toTopOf="parent" />

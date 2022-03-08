@@ -53,6 +53,7 @@ public class ArmoryX4 extends AppCompatActivity {
         WebSettings webset = webView.getSettings();
         webset.setJavaScriptEnabled(true);
 
+        webView.loadUrl("");
 
         sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
