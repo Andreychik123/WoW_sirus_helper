@@ -113,6 +113,36 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button buttonBg = (Button)findViewById(R.id.buttonBg);  // код переброски на другую сцену
+        buttonBg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    Intent intent = new Intent(MainActivity.this, Bg.class);
+
+                    startActivity(intent);finish();
+
+                } catch (Exception e) {
+                }
+
+            }
+        });
+
+        Button buttonArena = (Button)findViewById(R.id.buttonArena);  // код переброски на другую сцену
+        buttonArena.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    Intent intent = new Intent(MainActivity.this, Arena.class);
+
+                    startActivity(intent);finish();
+
+                } catch (Exception e) {
+                }
+
+            }
+        });
+
         Button buttonprogoforum = (Button)findViewById(R.id.buttonprogoforum);  // код переброски на другую сцену
         buttonprogoforum.setOnClickListener(new View.OnClickListener() {
             @Override

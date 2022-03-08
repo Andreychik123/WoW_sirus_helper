@@ -57,6 +57,30 @@
         </activity>
         //End Forum
 
+        //Start Arena
+        <activity
+            android:name=".Arena"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        //End Arena
+
+        //Start Bg
+        <activity
+            android:name=".Bg"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        //End Bg
+
 
 
 

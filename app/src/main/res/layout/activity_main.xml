@@ -64,6 +64,39 @@
                 android:textSize="24sp" />
 
             <Button
+                android:id="@+id/buttonArmory"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/button_white"
+                android:text="@string/buttonArmory"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/buttonBg"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/button_white"
+                android:text="@string/buttonBg"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/buttonArena"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/button_white"
+                android:text="@string/buttonArena"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+            <Button
                 android:id="@+id/buttonprogolosovat"
                 android:layout_width="350dp"
                 android:layout_height="50dp"
