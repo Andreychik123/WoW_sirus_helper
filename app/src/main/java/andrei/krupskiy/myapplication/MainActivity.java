@@ -1,9 +1,23 @@
 package andrei.krupskiy.myapplication;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
+
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -27,6 +41,13 @@ public class MainActivity extends AppCompatActivity {
 
     private long backpressedTime;
 
+    //уведомления начало
+    private static String CHANNEL_ID = "CHANNEL_ID";
+    private NotificationManager notificationManager;
+    private static final int NOTIFY_ID = 1;
+    Button b1;
+    //уведомление конец
+
     // бадяга с партингом
     private Elements content;
     public ArrayList<String> titleList = new ArrayList<String>();
@@ -39,6 +60,56 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //уведомления начало
+        b1=findViewById(R.id.buttonprogolosovat);
+        notificationManager = (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
+
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    Thread.sleep(1000);
+                } catch(InterruptedException ex) {}
+
+                NotificationCompat.Builder builder =
+                        new NotificationCompat.Builder(MainActivity.this, CHANNEL_ID)
+                                .setSmallIcon(R.drawable.ic_launcher_foreground)
+                                .setAutoCancel(false)
+                                .setContentTitle("Заголовок")
+                                .setContentText("Какой то текст.............")
+                                .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+
+                NotificationManagerCompat notificationManager =
+                        NotificationManagerCompat.from(MainActivity.this);
+                notificationManager.notify(NOTIFY_ID, builder.build());
+            }
+        });
+
+
+
+        /*
+
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+                NotificationCompat.Builder notificationBuilder =
+                        new NotificationCompat.Builder(getApplicationContext(), CHANNEL_ID)
+                                .setAutoCancel(false)
+                                .setSmallIcon(R.drawable.ic_launcher_foreground)
+                                .setWhen(System.currentTimeMillis())
+                                .setContentIntent(pendingIntent)
+                                .setContentTitle("Заголовок")
+                                .setContentText("Какой то текст.............");
+                createChannelIfNeeded(notificationManager);
+                notificationManager.notify(NOTIFY_ID, notificationBuilder.build());
+
+            }});
+
+         */
+        //уведомления конец
 
         // бадяга с партингом
         lv = (ListView) findViewById(R.id.onlaineText);
@@ -197,6 +268,13 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    }
+
+    public static void createChannelIfNeeded(NotificationManager manager) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel notificationChannel = new NotificationChannel(CHANNEL_ID, CHANNEL_ID, NotificationManager.IMPORTANCE_DEFAULT);
+            manager.createNotificationChannel(notificationChannel);
+        }
     }
 
     //бадяга с партингом
