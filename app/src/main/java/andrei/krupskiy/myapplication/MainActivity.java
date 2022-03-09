@@ -67,16 +67,13 @@ public class MainActivity extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try {
-                    Thread.sleep(1000);
-                } catch(InterruptedException ex) {}
+
 
                 NotificationCompat.Builder builder =
                         new NotificationCompat.Builder(MainActivity.this, CHANNEL_ID)
                                 .setSmallIcon(R.drawable.ic_launcher_foreground)
-                                .setAutoCancel(false)
-                                .setContentTitle("Заголовок")
-                                .setContentText("Какой то текст.............")
+                                .setContentTitle("Напоминание")
+                                .setContentText("Пора покормить кота")
                                 .setPriority(NotificationCompat.PRIORITY_DEFAULT);
 
                 NotificationManagerCompat notificationManager =
@@ -87,28 +84,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        /*
 
-        b1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-                NotificationCompat.Builder notificationBuilder =
-                        new NotificationCompat.Builder(getApplicationContext(), CHANNEL_ID)
-                                .setAutoCancel(false)
-                                .setSmallIcon(R.drawable.ic_launcher_foreground)
-                                .setWhen(System.currentTimeMillis())
-                                .setContentIntent(pendingIntent)
-                                .setContentTitle("Заголовок")
-                                .setContentText("Какой то текст.............");
-                createChannelIfNeeded(notificationManager);
-                notificationManager.notify(NOTIFY_ID, notificationBuilder.build());
-
-            }});
-
-         */
         //уведомления конец
 
         // бадяга с партингом
