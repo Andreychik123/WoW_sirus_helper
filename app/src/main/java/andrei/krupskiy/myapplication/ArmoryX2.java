@@ -84,11 +84,6 @@ public class ArmoryX2 extends AppCompatActivity {
 
     }
 
-
-
-
-
-
     @Override
     public void onBackPressed() {
 

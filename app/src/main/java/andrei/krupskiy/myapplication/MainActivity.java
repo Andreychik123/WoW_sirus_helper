@@ -1,23 +1,17 @@
 package andrei.krupskiy.myapplication;
 
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
+
+
+
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-
-
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.NotificationCompat;
-import androidx.core.app.NotificationManagerCompat;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -27,7 +21,12 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import android.app.NotificationChannel;
+import android.app.Notification;
+import android.app.NotificationManager;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -42,9 +41,9 @@ public class MainActivity extends AppCompatActivity {
     private long backpressedTime;
 
     //уведомления начало
-    private static String CHANNEL_ID = "CHANNEL_ID";
     private NotificationManager notificationManager;
     private static final int NOTIFY_ID = 1;
+    private static final String CHANNEL_ID = "CHANNEL_ID";
     Button b1;
     //уведомление конец
 
@@ -63,24 +62,48 @@ public class MainActivity extends AppCompatActivity {
         //уведомления начало
         b1=findViewById(R.id.buttonprogolosovat);
         notificationManager = (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
-
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                try {
+
+                    Intent notificationIntent = new Intent(MainActivity.this, Vote.class);
+                    PendingIntent contentIntent = PendingIntent.getActivity(MainActivity.this,
+                            0, notificationIntent,
+                            PendingIntent.FLAG_CANCEL_CURRENT);
 
 
-                NotificationCompat.Builder builder =
-                        new NotificationCompat.Builder(MainActivity.this, CHANNEL_ID)
-                                .setSmallIcon(R.drawable.ic_launcher_foreground)
-                                .setContentTitle("Напоминание")
-                                .setContentText("Пора покормить кота")
-                                .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+                    NotificationCompat.Builder notificationBuilder =
+                            new NotificationCompat.Builder(MainActivity.this, CHANNEL_ID);
 
-                NotificationManagerCompat notificationManager =
-                        NotificationManagerCompat.from(MainActivity.this);
-                notificationManager.notify(NOTIFY_ID, builder.build());
+                    notificationBuilder.setAutoCancel(true)
+                            .setSmallIcon(R.mipmap.ic_launcher)
+                            .setContentTitle("Не забудь проголосовать !")
+                            .setContentText("Чтобы проголосовать, нажми на уведомление")
+                            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                            .setContentIntent(contentIntent)
+                            // необязательные настройки
+                            .setLargeIcon(BitmapFactory.decodeResource(getResources(),
+                                    R.mipmap.ic_launcher)) // большая картинка
+                            .setTicker("Последнее китайское предупреждение!") // до Lollipop
+                            .setAutoCancel(true); // автоматически закрыть уведомление после нажатия
+
+                    notificationManager.notify(/*notification id*/1, notificationBuilder.build());
+
+
+
+                } catch (Exception e) {
+                    Toast.makeText(getBaseContext(), "Что то пошло не по плану(",Toast.LENGTH_SHORT).show();
+                }
+
+
+
+
             }
+
+
         });
+
 
 
 
@@ -138,13 +161,14 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(browserIntent);
 
                 } catch (Exception e) {
+
                 }
 
             }
         });
 
 
-
+/*
         Button buttonprogolosovat = (Button)findViewById(R.id.buttonprogolosovat);  // код переброски на другую сцену
         buttonprogolosovat.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -159,6 +183,10 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+ */
+
+
 
         Button buttonBg = (Button)findViewById(R.id.buttonBg);  // код переброски на другую сцену
         buttonBg.setOnClickListener(new View.OnClickListener() {
@@ -246,12 +274,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public static void createChannelIfNeeded(NotificationManager manager) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            NotificationChannel notificationChannel = new NotificationChannel(CHANNEL_ID, CHANNEL_ID, NotificationManager.IMPORTANCE_DEFAULT);
-            manager.createNotificationChannel(notificationChannel);
-        }
-    }
+
 
     //бадяга с партингом
     public class NewThread extends AsyncTask<String, Void, String> {
