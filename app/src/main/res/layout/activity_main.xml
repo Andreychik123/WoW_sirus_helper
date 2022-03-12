@@ -20,154 +20,159 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="wrap_content"
-                android:layout_height="150dp"
-                android:scaleType="fitStart"
-                app:srcCompat="@drawable/main_background_logo" />
-        </LinearLayout>
-
-        <LinearLayout
+        <ImageView
+            android:id="@+id/imageView3"
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:orientation="vertical">
+            android:layout_height="85dp"
+            android:scaleType="fitStart"
+            app:srcCompat="@drawable/main_background_logo" />
 
-            <ListView
-                android:id="@+id/onlaineText"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginLeft="100dp" />
-        </LinearLayout>
-
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-
-            <Button
-                android:id="@+id/buttonprogoforum"
-                android:layout_width="350dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/button_white"
-                android:text="@string/buttonprogoforum"
-                android:textColor="@color/white"
-                android:textSize="24sp" />
+            android:layout_height="match_parent">
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="30dp"
-                android:orientation="horizontal">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-                <Button
-                    android:id="@+id/buttonArmory"
-                    android:layout_width="180dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:layout_marginRight="10dp"
-                    android:background="@drawable/button_white"
-                    android:text="@string/buttonArmory"
-                    android:textColor="@color/white"
-                    android:textSize="24sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-                <Button
-                    android:id="@+id/buttonX4"
-                    android:layout_width="75dp"
-                    android:layout_height="50dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/button_white"
-                    android:text="X4"
-                    android:textColor="@color/white"
-                    android:textSize="24sp" />
 
-                <Button
-                    android:id="@+id/buttonX2"
-                    android:layout_width="75dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/button_white"
-                    android:text="X2"
-                    android:textColor="@color/white"
-                    android:textSize="24sp" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="25dp"
+                        android:orientation="vertical">
+
+                        <ListView
+                            android:id="@+id/onlaineText"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="100dp" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/buttonprogoforum"
+                        android:layout_width="350dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/button_white"
+                        android:text="@string/buttonprogoforum"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="30dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/buttonArmory"
+                            android:layout_width="180dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/button_white"
+                            android:text="@string/buttonArmory"
+                            android:textColor="@color/white"
+                            android:textSize="24sp" />
+
+                        <Button
+                            android:id="@+id/buttonX4"
+                            android:layout_width="75dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/button_white"
+                            android:text="X4"
+                            android:textColor="@color/white"
+                            android:textSize="24sp" />
+
+                        <Button
+                            android:id="@+id/buttonX2"
+                            android:layout_width="75dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/button_white"
+                            android:text="X2"
+                            android:textColor="@color/white"
+                            android:textSize="24sp" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/buttonBg"
+                        android:layout_width="350dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/button_white"
+                        android:text="@string/buttonBg"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
+
+                    <Button
+                        android:id="@+id/buttonArena"
+                        android:layout_width="350dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/button_white"
+                        android:text="@string/buttonArena"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
+
+                    <Button
+                        android:id="@+id/buttonprogolosovat"
+                        android:layout_width="350dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/button_white"
+                        android:text="@string/buttonprogolosovat"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="26dp"
+                        android:gravity="center|center_horizontal"
+                        android:paddingTop="50dp">
+
+                        <ImageButton
+                            android:id="@+id/batton_logo_dis"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:src="@drawable/batton_logo_dis" />
+
+                        <ImageButton
+                            android:id="@+id/batton_logo_youtube"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_marginLeft="@android:dimen/app_icon_size"
+                            android:layout_marginRight="@android:dimen/app_icon_size"
+                            android:src="@drawable/batton_logo_youtube" />
+
+                        <ImageButton
+                            android:id="@+id/batton_logo_vk"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:src="@drawable/batton_logo_vk" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
             </LinearLayout>
-
-            <Button
-                android:id="@+id/buttonBg"
-                android:layout_width="350dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/button_white"
-                android:text="@string/buttonBg"
-                android:textColor="@color/white"
-                android:textSize="24sp" />
-
-            <Button
-                android:id="@+id/buttonArena"
-                android:layout_width="350dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/button_white"
-                android:text="@string/buttonArena"
-                android:textColor="@color/white"
-                android:textSize="24sp" />
-
-            <Button
-                android:id="@+id/buttonprogolosovat"
-                android:layout_width="350dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/button_white"
-                android:text="@string/buttonprogolosovat"
-                android:textColor="@color/white"
-                android:textSize="24sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="26dp"
-            android:gravity="center|center_horizontal"
-            android:orientation="horizontal"
-            android:paddingTop="50dp">
-
-            <ImageButton
-                android:id="@+id/batton_logo_dis"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
-                android:src="@drawable/batton_logo_dis" />
-
-            <ImageButton
-                android:id="@+id/batton_logo_youtube"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
-                android:layout_marginLeft="@android:dimen/app_icon_size"
-                android:layout_marginRight="@android:dimen/app_icon_size"
-                android:src="@drawable/batton_logo_youtube" />
-
-            <ImageButton
-                android:id="@+id/batton_logo_vk"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
-                android:src="@drawable/batton_logo_vk" />
-
-        </LinearLayout>
-
+        </ScrollView>
     </LinearLayout>
 
 </RelativeLayout>
