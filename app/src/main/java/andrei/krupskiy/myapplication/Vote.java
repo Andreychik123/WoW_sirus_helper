@@ -29,6 +29,8 @@ public class Vote extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.web);
 
+
+
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         inputUrl = (EditText) findViewById(R.id.autoCompleteTextViewX4);
         webView = (WebView) findViewById(R.id.webView);

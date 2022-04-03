@@ -5,13 +5,18 @@ package andrei.krupskiy.myapplication;
 
 import static androidx.core.app.NotificationCompat.PRIORITY_HIGH;
 
+import android.accessibilityservice.AccessibilityServiceInfo;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.media.RingtoneManager;
+import android.os.SystemClock;
+import android.util.Log;
+import android.view.View.OnClickListener;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -21,8 +26,11 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.Chronometer;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import android.app.NotificationChannel;
@@ -38,17 +46,39 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.Locale;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.logging.Handler;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
-    private long backpressedTime;
-    public int visibility;
+    long backpressedTime;
+
     public long when;
+
+//    таймер
+// Текущее время
+    Date currentDate = new Date();
+    // Форматирование времени как "день.месяц.год"
+    DateFormat dateFormat = new SimpleDateFormat("dd:MM:yyyy", Locale.getDefault());
+    String dateText = dateFormat.format(currentDate);
+    // Форматирование времени как "часы:минуты:секунды"
+    DateFormat timeFormat = new SimpleDateFormat("HH:mm:ss", Locale.getDefault());
+    String timeText = timeFormat.format(currentDate);
+
+    public String dadaNotif;
+//    таймер конец
 
 
     //уведомления начало
@@ -56,7 +86,6 @@ public class MainActivity extends AppCompatActivity {
     private static final int NOTIFY_ID = 1;
     private static final String CHANNEL_ID = "CHANNEL_ID";
     Button b1;
-    Handler h;
     //уведомление конец
 
     // бадяга с партингом
@@ -78,44 +107,38 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
         //уведомления начало
         b1=findViewById(R.id.buttonprogolosovat);
         notificationManager = (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
+
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-
                 try {
-
 
 
                     Intent intent1 = new Intent(getApplicationContext(), Vote.class);
                     intent1.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                    PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, intent1, PendingIntent.FLAG_UPDATE_CURRENT);
+                    PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, intent1,
+                            PendingIntent.FLAG_UPDATE_CURRENT);
 
                     NotificationCompat.Builder notificationBuilder =
                             new NotificationCompat.Builder(getApplicationContext(), CHANNEL_ID)
                                     .setAutoCancel(false)
                                     .setSmallIcon(R.mipmap.ic_launcher)
                                     .setLargeIcon(BitmapFactory.decodeResource(getResources(),R.mipmap.ic_launcher_foreground)) // большая картинка
-                                    .setWhen(System.currentTimeMillis())
+                                    .setDefaults(Notification.DEFAULT_ALL)
                                     .setContentIntent(pendingIntent)
-                                    .setContentTitle("Ты можежешь проголосовать !")
-                                    .setContentText("Чтобы проголосовать, нами на уведомление")
-                                    .setDefaults(Notification.DEFAULT_SOUND)
-                                    .setDefaults(Notification.DEFAULT_VIBRATE)
+                                    .setContentTitle("Голосовал " + dateText + " в " + timeText)
+                                    .setContentText("Следующий раз через 21ч 45м")
                                     .setPriority(PRIORITY_HIGH);
 
-                        createChannelIfNeeded(notificationManager);
-                        notificationManager.notify(NOTIFY_ID, notificationBuilder.build());
 
 
 
-
-
+                    createChannelIfNeeded(notificationManager);
+                    notificationManager.notify(NOTIFY_ID, notificationBuilder.build());
 
 
 
@@ -126,13 +149,8 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent);
 
                     } catch (Exception e) {
-                        Toast.makeText(getBaseContext(), "Уведомление не работает(",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getBaseContext(), "Переход не работает",Toast.LENGTH_SHORT).show();
                     }
-
-
-
-
-
 
                 } catch (Exception e) {
                     Toast.makeText(getBaseContext(), "Уведомление не работает(",Toast.LENGTH_SHORT).show();
@@ -145,12 +163,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         });
-
-
-
-
-
-
 
 
         //уведомления конец
@@ -313,6 +325,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //таймер
+
+        //таймер конец
+
     }
 
 
@@ -326,6 +342,9 @@ public class MainActivity extends AppCompatActivity {
 
     //уведомление конец
 
+    //таймер
+
+    //таймер конец
 
 
 
@@ -335,8 +354,8 @@ public class MainActivity extends AppCompatActivity {
         protected String doInBackground(String... arg) {
             Document doc;
             try {
-                doc = Jsoup.connect("https://sirus.su/#/").get();
-                content = doc.select(".players-online ");
+               doc = Jsoup.connect("https://sirus.su/#/").get();
+               content = doc.select(".players-online ");
                 titleList.clear();
                 for (Element contents: content) {
                     titleList.add(contents.text());
@@ -369,7 +388,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-        backpressedTime = System.currentTimeMillis(); //засекли время нажатия на кнопку
+        backpressedTime = System.currentTimeMillis(); //засекли время нажатия на кнопку;
     }
 
 

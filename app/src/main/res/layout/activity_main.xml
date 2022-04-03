@@ -129,6 +129,7 @@
                         android:textColor="@color/white"
                         android:textSize="24sp" />
 
+
                     <Button
                         android:id="@+id/buttonprogolosovat"
                         android:layout_width="350dp"

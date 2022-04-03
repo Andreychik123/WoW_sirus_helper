@@ -36,21 +36,17 @@
             <LinearLayout
                 android:layout_width="270dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/textView21"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/textArmory"
-                    android:textSize="20dp" />
 
                 <AutoCompleteTextView
                     android:id="@+id/autoCompleteTextViewX4"
                     android:layout_width="wrap_content"
                     android:layout_gravity="center"
+                    android:hint="@string/textArmory"
+                    android:textStyle="bold"
+                    android:textSize="22dp"
                     android:layout_height="wrap_content"
                     android:text="" />
 
@@ -93,8 +89,6 @@
                 android:id="@+id/webView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -103,6 +97,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/progressBar">
 
             </WebView>
+
         </LinearLayout>
 
     </LinearLayout>
