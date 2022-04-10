@@ -22,12 +22,12 @@
                 android:orientation="vertical">
 
                 <ImageButton
-                    android:id="@+id/refreshButton"
+                    android:id="@+id/refreshButton1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
                     android:layout_marginTop="8dp"
-                    app:layout_constraintStart_toEndOf="@+id/forwardButton"
+                    app:layout_constraintStart_toEndOf="@+id/forwardButton1"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/ic_refresh_black" />
             </LinearLayout>
@@ -41,7 +41,7 @@
 
 
                 <AutoCompleteTextView
-                    android:id="@+id/autoCompleteTextViewX4"
+                    android:id="@+id/autoCompleteTextViewX41"
                     android:layout_width="wrap_content"
                     android:layout_gravity="center"
                     android:hint="@string/textArmory"
@@ -58,7 +58,7 @@
                 android:orientation="vertical">
 
                 <ImageButton
-                    android:id="@+id/sendButton"
+                    android:id="@+id/sendButton1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -74,7 +74,7 @@
             android:orientation="vertical">
 
             <ProgressBar
-                android:id="@+id/progressBar"
+                android:id="@+id/progressBar1"
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -83,10 +83,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/refreshButton" />
+                app:layout_constraintTop_toBottomOf="@+id/refreshButton1" />
 
             <WebView
-                android:id="@+id/webView"
+                android:id="@+id/webView1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
@@ -94,7 +94,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/progressBar">
+                app:layout_constraintTop_toBottomOf="@+id/progressBar1">
 
             </WebView>
 

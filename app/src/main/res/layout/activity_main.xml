@@ -36,6 +36,7 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -56,55 +57,90 @@
                             android:layout_marginLeft="100dp" />
                     </LinearLayout>
 
-                    <Button
-                        android:id="@+id/buttonprogoforum"
-                        android:layout_width="350dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="30dp"
-                        android:background="@drawable/button_white"
-                        android:text="@string/buttonprogoforum"
-                        android:textColor="@color/white"
-                        android:textSize="24sp" />
-
                     <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:layout_marginTop="30dp"
                         android:orientation="horizontal">
 
                         <Button
-                            android:id="@+id/buttonArmory"
-                            android:layout_width="180dp"
+                            android:id="@+id/buttonprogoforum"
+                            android:layout_width="350dp"
                             android:layout_height="50dp"
-                            android:layout_gravity="center"
+                            android:layout_marginLeft="25dp"
                             android:layout_marginRight="10dp"
                             android:background="@drawable/button_white"
+                            android:text="@string/buttonprogoforum"
+                            android:textColor="@color/white"
+                            android:textSize="24sp" />
+
+                        <Button
+                            android:id="@+id/chat"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/button_white"
+                            android:text="@string/chat"
+                            android:textColor="@color/white"
+                            android:textSize="24sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/buttonArmory"
+                            android:layout_width="350dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="30dp"
+                            android:background="@drawable/style_bnt_white_press1"
                             android:text="@string/buttonArmory"
                             android:textColor="@color/white"
                             android:textSize="24sp" />
 
-                        <Button
-                            android:id="@+id/buttonX4"
-                            android:layout_width="75dp"
-                            android:layout_height="50dp"
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_marginRight="10dp"
-                            android:background="@drawable/button_white"
-                            android:text="X4"
-                            android:textColor="@color/white"
-                            android:textSize="24sp" />
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
 
-                        <Button
-                            android:id="@+id/buttonX2"
-                            android:layout_width="75dp"
-                            android:layout_height="50dp"
-                            android:layout_gravity="center"
-                            android:background="@drawable/button_white"
-                            android:text="X2"
-                            android:textColor="@color/white"
-                            android:textSize="24sp" />
+                            <Button
+                                android:id="@+id/buttonX4"
+                                android:layout_width="110dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/button_white"
+                                android:text="X4"
+                                android:textColor="@color/white"
+                                android:textSize="24sp" />
+
+                            <Button
+                                android:id="@+id/buttonX5"
+                                android:layout_width="110dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/button_white"
+                                android:text="X5"
+                                android:textColor="@color/white"
+                                android:textSize="24sp" />
+
+                            <Button
+                                android:id="@+id/buttonX2"
+                                android:layout_width="110dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/button_white"
+                                android:text="X2"
+                                android:textColor="@color/white"
+                                android:textSize="24sp" />
+                        </LinearLayout>
                     </LinearLayout>
 
                     <Button
@@ -131,7 +167,7 @@
 
 
                     <Button
-                        android:id="@+id/buttonprogolosovat"
+                        android:id="@+id/buttonprogolosovat1"
                         android:layout_width="350dp"
                         android:layout_height="50dp"
                         android:layout_gravity="center"
@@ -140,6 +176,7 @@
                         android:text="@string/buttonprogolosovat"
                         android:textColor="@color/white"
                         android:textSize="24sp" />
+
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -171,9 +208,9 @@
                     </LinearLayout>
 
                 </LinearLayout>
-
             </LinearLayout>
         </ScrollView>
+
     </LinearLayout>
 
 </RelativeLayout>

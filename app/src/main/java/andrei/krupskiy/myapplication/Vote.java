@@ -19,10 +19,10 @@ public class Vote extends AppCompatActivity {
 
     private long backpressedTime;
 
-    ProgressBar progressBar;
-    EditText inputUrl;
-    WebView webView;
-    ImageButton sendButton, forwardButton, backButton, refreshButton;
+    ProgressBar progressBar1;
+    EditText inputUrl1;
+    WebView webView1;
+    ImageButton sendButton1, forwardButton1, backButton1, refreshButton1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,69 +31,69 @@ public class Vote extends AppCompatActivity {
 
 
 
-        progressBar = (ProgressBar) findViewById(R.id.progressBar);
-        inputUrl = (EditText) findViewById(R.id.autoCompleteTextViewX4);
-        webView = (WebView) findViewById(R.id.webView);
-        sendButton = (ImageButton) findViewById(R.id.sendButton);
-        forwardButton = (ImageButton) findViewById(R.id.forwardButton);
-        backButton = (ImageButton) findViewById(R.id.backButton);
-        refreshButton = (ImageButton) findViewById(R.id.refreshButton);
+        progressBar1 = (ProgressBar) findViewById(R.id.progressBar1);
+        inputUrl1 = (EditText) findViewById(R.id.autoCompleteTextViewX41);
+        webView1 = (WebView) findViewById(R.id.webView1);
+        sendButton1 = (ImageButton) findViewById(R.id.sendButton1);
+        forwardButton1 = (ImageButton) findViewById(R.id.forwardButton1);
+        backButton1 = (ImageButton) findViewById(R.id.backButton1);
+        refreshButton1 = (ImageButton) findViewById(R.id.refreshButton1);
 
-        webView.setWebViewClient(new myWebClient());
+        webView1.setWebViewClient(new myWebClient());
 
-        webView.setWebChromeClient(new WebChromeClient(){
+        webView1.setWebChromeClient(new WebChromeClient(){
             @Override
             public void onProgressChanged(WebView view, int newProgress) {
-                progressBar.setProgress(newProgress);
+                progressBar1.setProgress(newProgress);
                 if(newProgress==100)
-                    progressBar.setVisibility(View.GONE);
+                    progressBar1.setVisibility(View.GONE);
                 else
-                    progressBar.setVisibility(View.VISIBLE);
+                    progressBar1.setVisibility(View.VISIBLE);
             }
         });
 
-        WebSettings webset = webView.getSettings();
+        WebSettings webset = webView1.getSettings();
         webset.setJavaScriptEnabled(true);
 
-        webView.loadUrl("https://wow.mmotop.ru/servers/5130/votes/new");
+        webView1.loadUrl("https://wow.mmotop.ru/servers/5130/votes/new");
 
-        sendButton.setOnClickListener(new View.OnClickListener() {
+        sendButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url = inputUrl.getText().toString();
+                String url = inputUrl1.getText().toString();
 
                 if (!url.startsWith("http://")) {
                     url = "http://" + url;
                 }
-                webView.loadUrl(url);
+                webView1.loadUrl(url);
 
                 InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                inputMethodManager.hideSoftInputFromWindow(webView.getWindowToken(), 0);
+                inputMethodManager.hideSoftInputFromWindow(webView1.getWindowToken(), 0);
             }
         });
 
-        forwardButton.setOnClickListener(new View.OnClickListener() {
+        forwardButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (webView.canGoForward())
-                    webView.goForward();
+                if (webView1.canGoForward())
+                    webView1.goForward();
             }
         });
 
 
 
-        backButton.setOnClickListener(new View.OnClickListener() {
+        backButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (webView.canGoBack())
-                    webView.goBack();
+                if (webView1.canGoBack())
+                    webView1.goBack();
             }
         });
 
-        refreshButton.setOnClickListener(new View.OnClickListener() {
+        refreshButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                webView.reload();
+                webView1.reload();
             }
         });
 
@@ -115,8 +115,8 @@ public class Vote extends AppCompatActivity {
             finish();
         }else{
 
-            if (webView.canGoBack())
-                webView.goBack();
+            if (webView1.canGoBack())
+                webView1.goBack();
 
             Toast.makeText(getBaseContext(), "Нажмите ещё раз, что бы перейти в Главное меню",Toast.LENGTH_SHORT).show(); //выдает текст
 

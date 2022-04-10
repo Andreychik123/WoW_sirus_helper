@@ -1,11 +1,15 @@
 <resources>
     <string name="app_name">WoW Sirus helper</string>
     <string name="buttonprogolosovat">Проголосовать</string>
+    <string name="buttonprogolosovat2">Проголосовать 2</string>
+    <string name="buttonprogolosovat3">Проголосовать 3</string>
     <string name="buttonprogoforum">Форум</string>
     <string name="buttonArena">Рейтинг Арены</string>
     <string name="buttonBg">Рейтинг БГ</string>
     <string name="buttonArmory">Armory</string>
     <string name="textArmory">Введите имя персонажа</string>
+    <string name="zagruszka">Загрузка...</string>
+    <string name="chat">Чат</string>
 
 
 </resources>

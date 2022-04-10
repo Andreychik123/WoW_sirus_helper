@@ -32,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="8dp"
-                app:layout_constraintStart_toEndOf="@+id/backButton"
+                app:layout_constraintStart_toEndOf="@+id/backButton1"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_arrow_forward_black" />
 
@@ -42,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="8dp"
-                app:layout_constraintStart_toEndOf="@+id/forwardButton"
+                app:layout_constraintStart_toEndOf="@+id/forwardButton1"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_refresh_black" />
 
@@ -53,8 +53,8 @@
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="120dp"
-                app:layout_constraintEnd_toStartOf="@+id/sendButton"
-                app:layout_constraintStart_toEndOf="@+id/refreshButton"
+                app:layout_constraintEnd_toStartOf="@+id/sendButton1"
+                app:layout_constraintStart_toEndOf="@+id/refreshButton1"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
@@ -84,7 +84,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/refreshButton" />
+                app:layout_constraintTop_toBottomOf="@+id/refreshButton1" />
 
             <WebView
                 android:id="@+id/webView"
@@ -95,7 +95,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/progressBar">
+                app:layout_constraintTop_toBottomOf="@+id/progressBar1">
 
             </WebView>
         </LinearLayout>

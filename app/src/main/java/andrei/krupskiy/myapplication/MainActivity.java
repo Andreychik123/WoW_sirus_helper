@@ -3,20 +3,7 @@ package andrei.krupskiy.myapplication;
 
 
 
-import static androidx.core.app.NotificationCompat.PRIORITY_HIGH;
-
-import android.accessibilityservice.AccessibilityServiceInfo;
-import android.app.AlarmManager;
-import android.app.PendingIntent;
-import android.content.BroadcastReceiver;
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.BitmapFactory;
-import android.graphics.Color;
-import android.media.RingtoneManager;
-import android.os.SystemClock;
-import android.util.Log;
-import android.view.View.OnClickListener;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -26,19 +13,13 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.Chronometer;
 import android.widget.ImageButton;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import android.app.NotificationChannel;
-import android.app.Notification;
 import android.app.NotificationManager;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.NotificationCompat;
-import androidx.core.app.NotificationManagerCompat;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -49,15 +30,6 @@ import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.Locale;
-import java.util.Timer;
-import java.util.TimerTask;
-import java.util.logging.Handler;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
@@ -108,61 +80,61 @@ public class MainActivity extends AppCompatActivity {
 
 
         //уведомления начало
-        b1=findViewById(R.id.buttonprogolosovat);
-        notificationManager = (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
+//        b1=findViewById(R.id.buttonprogolosovat1);
+//        notificationManager = (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
+//
+//        b1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                try {
+//
+//
+//                    Intent intent1 = new Intent(getApplicationContext(), Vote.class);
+//                    intent1.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+//                    PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, intent1,
+//                            PendingIntent.FLAG_UPDATE_CURRENT);
+//
+//                    NotificationCompat.Builder notificationBuilder =
+//                            new NotificationCompat.Builder(getApplicationContext(), CHANNEL_ID)
+//                                    .setAutoCancel(false)
+//                                    .setSmallIcon(R.mipmap.ic_launcher)
+//                                    .setLargeIcon(BitmapFactory.decodeResource(getResources(),R.mipmap.ic_launcher_foreground)) // большая картинка
+//                                    .setDefaults(Notification.DEFAULT_ALL)
+//                                    .setContentIntent(pendingIntent)
+//                                    .setContentTitle("Голосовал " + dateText + " в " + timeText)
+//                                    .setContentText("Следующий раз через 21ч 45м")
+//                                    .setPriority(PRIORITY_HIGH);
+//
+//
+//
+//
+//                    createChannelIfNeeded(notificationManager);
+//                    notificationManager.notify(NOTIFY_ID, notificationBuilder.build());
+//
+//
+//
+//
+//                    try {
+//                        //переход на другую сцену
+//                        Intent intent = new Intent(MainActivity.this, Vote.class);
+//                        startActivity(intent);
+//
+//                    } catch (Exception e) {
+//                        Toast.makeText(getBaseContext(), "Переход не работает",Toast.LENGTH_SHORT).show();
+//                    }
 
-        b1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                try {
-
-
-                    Intent intent1 = new Intent(getApplicationContext(), Vote.class);
-                    intent1.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                    PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, intent1,
-                            PendingIntent.FLAG_UPDATE_CURRENT);
-
-                    NotificationCompat.Builder notificationBuilder =
-                            new NotificationCompat.Builder(getApplicationContext(), CHANNEL_ID)
-                                    .setAutoCancel(false)
-                                    .setSmallIcon(R.mipmap.ic_launcher)
-                                    .setLargeIcon(BitmapFactory.decodeResource(getResources(),R.mipmap.ic_launcher_foreground)) // большая картинка
-                                    .setDefaults(Notification.DEFAULT_ALL)
-                                    .setContentIntent(pendingIntent)
-                                    .setContentTitle("Голосовал " + dateText + " в " + timeText)
-                                    .setContentText("Следующий раз через 21ч 45м")
-                                    .setPriority(PRIORITY_HIGH);
-
-
-
-
-                    createChannelIfNeeded(notificationManager);
-                    notificationManager.notify(NOTIFY_ID, notificationBuilder.build());
-
-
-
-
-                    try {
-                        //переход на другую сцену
-                        Intent intent = new Intent(MainActivity.this, Vote.class);
-                        startActivity(intent);
-
-                    } catch (Exception e) {
-                        Toast.makeText(getBaseContext(), "Переход не работает",Toast.LENGTH_SHORT).show();
-                    }
-
-                } catch (Exception e) {
-                    Toast.makeText(getBaseContext(), "Уведомление не работает(",Toast.LENGTH_SHORT).show();
-                }
-
-
-
-
-            }
-
-
-        });
+//                } catch (Exception e) {
+//                    Toast.makeText(getBaseContext(), "Уведомление не работает(",Toast.LENGTH_SHORT).show();
+//                }
+//
+//
+//
+//
+//            }
+//
+//
+//        });
 
 
         //уведомления конец
@@ -226,20 +198,23 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-//        Button buttonprogolosovat = (Button)findViewById(R.id.buttonprogolosovat);  // код переброски на другую сцену
-//        buttonprogolosovat.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                try {
-//                    Intent intent = new Intent(MainActivity.this, Vote.class);
-//
-//                    startActivity(intent);finish();
-//
-//                } catch (Exception e) {
-//                }
-//
-//            }
-//        });
+        Button buttonprogolosovat1 = (Button)findViewById(R.id.buttonprogolosovat1);  // код переброски на другую сцену
+        buttonprogolosovat1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    Intent intent = new Intent(MainActivity.this, Vote.class);
+
+                    startActivity(intent);finish();
+
+                } catch (Exception e) {
+                }
+
+            }
+        });
+
+
+
 
 
 
@@ -262,6 +237,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+//        Button chat = (Button)findViewById(R.id.chat);  // код переброски на другую сцену
+//        chat.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                try {
+//                    Intent intent = new Intent(MainActivity.this, Chat.class);
+//
+//                    startActivity(intent);finish();
+//
+//                } catch (Exception e) {
+//                }
+//
+//            }
+//        });
+
         Button buttonArena = (Button)findViewById(R.id.buttonArena);  // код переброски на другую сцену
         buttonArena.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -283,6 +273,21 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 try {
                     Intent intent = new Intent(MainActivity.this, ArmoryX4.class);
+
+                    startActivity(intent);finish();
+
+                } catch (Exception e) {
+                }
+
+            }
+        });
+
+        Button buttonX5 = (Button)findViewById(R.id.buttonX5);  // код переброски на другую сцену
+        buttonX5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    Intent intent = new Intent(MainActivity.this, ArmoryX5.class);
 
                     startActivity(intent);finish();
 

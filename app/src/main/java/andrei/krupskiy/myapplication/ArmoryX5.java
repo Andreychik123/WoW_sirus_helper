@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Forum extends AppCompatActivity {
+public class ArmoryX5 extends AppCompatActivity {
 
     private long backpressedTime;
 
@@ -27,7 +27,7 @@ public class Forum extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.web);
+        setContentView(R.layout.armor);
 
         progressBar = (ProgressBar) findViewById(R.id.progressBar1);
         inputUrl = (EditText) findViewById(R.id.autoCompleteTextViewX41);
@@ -53,15 +53,15 @@ public class Forum extends AppCompatActivity {
         WebSettings webset = webView.getSettings();
         webset.setJavaScriptEnabled(true);
 
-        webView.loadUrl("https://forum.sirus.su/");
+        webView.loadUrl("");
 
         sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String url = inputUrl.getText().toString();
 
-                if (!url.startsWith("http://")) {
-                    url = "http://" + url;
+                if (!url.startsWith("https://sirus.su/base/character/57/")) {
+                    url = "https://sirus.su/base/character/57/" + url;
                 }
                 webView.loadUrl(url);
 
@@ -70,23 +70,7 @@ public class Forum extends AppCompatActivity {
             }
         });
 
-        forwardButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (webView.canGoForward())
-                    webView.goForward();
-            }
-        });
 
-
-
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (webView.canGoBack())
-                    webView.goBack();
-            }
-        });
 
         refreshButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,7 +92,7 @@ public class Forum extends AppCompatActivity {
     public void onBackPressed() {
 
         if (backpressedTime + 2000 > System.currentTimeMillis()){ //если текущее время + 2с болье текущего время, то...
-            Intent intent = new Intent(Forum.this, MainActivity.class);
+            Intent intent = new Intent(ArmoryX5.this, MainActivity.class);
             // есть намеринеие перейти из GameLevels в MainActivity
             startActivity(intent);
             finish();

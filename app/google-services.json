@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "784273725304",
+    "project_id": "chat-wow-9006d",
+    "storage_bucket": "chat-wow-9006d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:784273725304:android:4c549baa0ecb3ce874da8d",
+        "android_client_info": {
+          "package_name": "andrei.krupskiy.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "784273725304-ma3ecthkrgkomch8h8ddkidp4qg34248.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAITQCjfJrkuSCu2xrY3jeFMiz3lTVbmSQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "784273725304-ma3ecthkrgkomch8h8ddkidp4qg34248.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

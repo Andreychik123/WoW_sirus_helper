@@ -1,14 +1,15 @@
 plugins {
     id 'com.android.application'
+    id 'com.google.gms.google-services'
 }
 
 android {
-    compileSdk 32
+    compileSdk 31
 
     defaultConfig {
         applicationId "andrei.krupskiy.myapplication"
-        minSdk 28
-        targetSdk 32
+        minSdk 26
+        targetSdk 31
         versionCode 1
         versionName "1.0"
 
@@ -24,19 +25,38 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+
     }
-    buildToolsVersion '32.1.0-rc1'
+    configurations.all {
+        resolutionStrategy.force 'com.android.support:support-v4:24.0.0'
+    }
+    buildToolsVersion '31.0.0'
 }
 
 dependencies {
 
 
+
     implementation 'androidx.appcompat:appcompat:1.4.1'
+
     implementation 'androidx.core:core:1.9.0-alpha02@aar'
     implementation 'com.google.android.material:material:1.5.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
     implementation 'org.jsoup:jsoup:1.14.3'
+
+    implementation 'com.firebaseui:firebase-ui-database:8.0.1'
+    implementation 'com.firebaseui:firebase-ui-firestore:8.0.1'
+    implementation 'com.firebaseui:firebase-ui-auth:8.0.1'
+    implementation 'com.firebaseui:firebase-ui-storage:8.0.1'
+
+
+//    implementation 'com.google.firebase:firebase-database-collection:18.0.1'
+//    implementation 'com.google.firebase:firebase-auth-interop:20.0.0'
+//    implementation 'com.firebaseui:firebase-ui:7.2.0'
+
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 }
+
+    apply plugin: 'com.google.gms.google-services'

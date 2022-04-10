@@ -29,13 +29,13 @@ public class ArmoryX2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.armor);
 
-        progressBar = (ProgressBar) findViewById(R.id.progressBar);
-        inputUrl = (EditText) findViewById(R.id.autoCompleteTextViewX4);
-        webView = (WebView) findViewById(R.id.webView);
-        sendButton = (ImageButton) findViewById(R.id.sendButton);
-        forwardButton = (ImageButton) findViewById(R.id.forwardButton);
-        backButton = (ImageButton) findViewById(R.id.backButton);
-        refreshButton = (ImageButton) findViewById(R.id.refreshButton);
+        progressBar = (ProgressBar) findViewById(R.id.progressBar1);
+        inputUrl = (EditText) findViewById(R.id.autoCompleteTextViewX41);
+        webView = (WebView) findViewById(R.id.webView1);
+        sendButton = (ImageButton) findViewById(R.id.sendButton1);
+        forwardButton = (ImageButton) findViewById(R.id.forwardButton1);
+        backButton = (ImageButton) findViewById(R.id.backButton1);
+        refreshButton = (ImageButton) findViewById(R.id.refreshButton1);
 
         webView.setWebViewClient(new myWebClient());
 

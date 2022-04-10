@@ -30,13 +30,7 @@
         </activity>
         //end MainActivity
 
-        //Start Gaids
-        //End Gaids
-
-        //Start GaidPort
-        //End GaidPort
-
-        //Start Vote
+        //Start Vote1
         <activity
             android:name=".Vote"
             android:exported="true"
@@ -46,7 +40,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        //End Vote
+        //End Vote1
+
 
         //Start Forum
         <activity
@@ -107,6 +102,31 @@
             </intent-filter>
         </activity>
         //End ArmoryX4
+
+        //Start ArmoryX5
+        <activity
+            android:name=".ArmoryX5"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        //End ArmoryX5
+
+        //Start Chat
+        <activity
+            android:name=".Chat"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        //End Chat
+
 
 
         <receiver android:name=".MainActivity" />
