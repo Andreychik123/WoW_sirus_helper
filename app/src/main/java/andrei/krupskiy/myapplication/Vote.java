@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
@@ -27,17 +29,19 @@ public class Vote extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.web);
 
 
 
-        progressBar1 = (ProgressBar) findViewById(R.id.progressBar1);
-        inputUrl1 = (EditText) findViewById(R.id.autoCompleteTextViewX41);
-        webView1 = (WebView) findViewById(R.id.webView1);
-        sendButton1 = (ImageButton) findViewById(R.id.sendButton1);
-        forwardButton1 = (ImageButton) findViewById(R.id.forwardButton1);
-        backButton1 = (ImageButton) findViewById(R.id.backButton1);
-        refreshButton1 = (ImageButton) findViewById(R.id.refreshButton1);
+        progressBar1 = (ProgressBar) findViewById(R.id.progressBar);
+        inputUrl1 = (EditText) findViewById(R.id.autoCompleteTextViewX4);
+        webView1 = (WebView) findViewById(R.id.webView);
+        sendButton1 = (ImageButton) findViewById(R.id.sendButton);
+        forwardButton1 = (ImageButton) findViewById(R.id.forwardButton);
+        backButton1 = (ImageButton) findViewById(R.id.backButton);
+        refreshButton1 = (ImageButton) findViewById(R.id.refreshButton);
 
         webView1.setWebViewClient(new myWebClient());
 

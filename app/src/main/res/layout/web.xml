@@ -16,12 +16,39 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
+
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextViewX4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginRight="120dp"
+                app:layout_constraintEnd_toStartOf="@+id/sendButton1"
+                app:layout_constraintStart_toEndOf="@+id/refreshButton1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/sendButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_send_black" />
+
+            <ImageButton
+                android:id="@+id/refreshButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                app:srcCompat="@drawable/ic_refresh_black" />
+
             <ImageButton
                 android:id="@+id/backButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginLeft="175dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_arrow_back_black" />
@@ -30,42 +57,12 @@
                 android:id="@+id/forwardButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginLeft="15dp"
                 app:layout_constraintStart_toEndOf="@+id/backButton1"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_arrow_forward_black" />
 
-            <ImageButton
-                android:id="@+id/refreshButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="8dp"
-                app:layout_constraintStart_toEndOf="@+id/forwardButton1"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_refresh_black" />
 
-            <AutoCompleteTextView
-                android:id="@+id/autoCompleteTextViewX4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginRight="120dp"
-                app:layout_constraintEnd_toStartOf="@+id/sendButton1"
-                app:layout_constraintStart_toEndOf="@+id/refreshButton1"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageButton
-                android:id="@+id/sendButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_send_black" />
 
         </LinearLayout>
 
@@ -90,7 +87,7 @@
                 android:id="@+id/webView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="0dp"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
